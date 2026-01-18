@@ -1,0 +1,11 @@
+venv/
+.env
+
+__pycache__/
+*.pyc
+
+video_prompts*.csv
+
+.DS_Store
+.idea/
+.vscode/
