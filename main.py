@@ -21,17 +21,15 @@ SYSTEM_PROMPT = (
 def extract_numbered_paragraphs(doc_path):
     """
     Извлекает все абзацы с текстом из DOCX-файла.
-    Создаём искусственную нумерацию, начиная с 1.
     """
     paragraphs = []
 
     try:
         document = Document(doc_path)
-        print(f"Загружен документ, всего параграфов: {len(document.paragraphs)}")
+        print(f"Загружен, всего параграфов: {len(document.paragraphs)}")
     except Exception as e:
         print(f"Не получается открыть файл: {e}")
         return paragraphs
-
     para_counter = 1
     for para in document.paragraphs:
         text = para.text.strip()
@@ -105,10 +103,10 @@ def generate_video_prompt(client, paragraph_text, retries=3):
         except Exception as e:
             if attempt < retries - 1:
                 wait = 2 ** attempt
-                print(f"API ошибка, повтор через {wait} сек... ({e})")
+                print(f"API ошибка, повтор через {wait} секунд ({e})")
                 sleep(wait)
             else:
-                print(f"Не удалось получить ответ после {retries} попыток: {e}")
+                print(f"Не удалось получить ответ {retries} попыток: {e}")
                 return None
 
 
@@ -166,7 +164,7 @@ def main():
         sleep(0.5)
 
     print("\n" + "=" * 50)
-    print(f"ГОТОВО! Сгенерировано промптов: {len(results)}")
+    print(f"Сгенерировано промптов: {len(results)}")
     print(f"Файл результата: {OUTPUT_FILE}")
 
 
