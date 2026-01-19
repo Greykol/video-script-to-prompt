@@ -1,4 +1,4 @@
-# Video Script to Video Prompt Generator
+### Video Script to Video Prompt Generator
 
 ## Описание
 
@@ -8,7 +8,6 @@
 
 Проект создан в рамках тестового задания.
 
----
 
 ## Функциональность
 
@@ -20,28 +19,28 @@
 - Защита от потери данных при ошибках API
 - Гибкая настройка количества обрабатываемых абзацев
 
----
 
 ## Требования
 
 - Python 3.9+
 - Аккаунт OpenAI с действующим API-ключом
 
----
 
 ## Установка
 
 1. Клонировать репозиторий:
-```bash
+```
 git clone https://github.com/Greykol/video-script-to-prompt.git
 cd video-script-to-prompt
+```
 
 2. Создать и активировать виртуальное окружение:
-```bash
+```
 python -m venv venv
 source venv/bin/activate
+```
 
 3. Установить зависимости:
-
-```bash
+```
 pip install -r requirements.txt
+```
