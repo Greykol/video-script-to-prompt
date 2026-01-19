@@ -1,5 +1,6 @@
 # Video Script to Video Prompt Generator
 
+
 ## Описание
 
 Этот проект представляет собой Python-скрипт, который автоматически обрабатывает текстовый сценарий видео и генерирует текстовые видео-промпты для дальнейшего использования в системах генерации видео (например, Google Veo).
@@ -35,15 +36,15 @@ cd video-script-to-prompt
 ```
 
 2. Создать и активировать виртуальное окружение:
-```
-python -m venv venv
-source venv/bin/activate
+  ```
+  python -m venv venv
+  source venv/bin/activate
 ```
 
 3. Установить зависимости:
-```
-pip install -r requirements.txt
-```
+  ```
+  pip install -r requirements.txt
+  ```
 
 4. Запустить проект:
   ```
